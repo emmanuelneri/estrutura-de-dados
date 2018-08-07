@@ -1,5 +1,6 @@
 package br.com.emmanuelneri.arrays;
 
+//Armazenar 4 notas de 5 alunos e apresentar as notas
 public class ProblemaNotasAlunosOtimizado {
 
     public static void main(String args[]) {

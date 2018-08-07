@@ -2,6 +2,7 @@ package br.com.emmanuelneri.arrays;
 
 import java.util.Arrays;
 
+//Armazenar 4 notas de 5 alunos e apresentar as notas
 public class ProblemaNotasAlunos {
 
     public static void main(String args[]) {
