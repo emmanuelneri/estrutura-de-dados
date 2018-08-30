@@ -1,6 +1,6 @@
 package br.com.emmanuelneri.listas;
 
-// Remover um elemento na lista por posição
+// Retornar quantidade de elementos da lista
 public class RetornarQuantidadeElementoLista {
 
     public static void main(String args[]) {
