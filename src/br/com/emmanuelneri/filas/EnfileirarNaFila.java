@@ -8,7 +8,7 @@ public class EnfileirarNaFila {
     public static void main(String args[]) {
 
         String[] fila = new String[10]; // Cria um array de 10 posições
-        int proximaPosicao = 0;// inicializa variável com valor da posição disponível para inserir na fila
+        int proximaPosicao = 0;// inicializa variável com valor da posição disponível para inserir na fila, iniciando em zero
 
         proximaPosicao = enfileirar(fila, proximaPosicao, "A"); // enfileira elemento A / proximaPosicao = 0
         proximaPosicao = enfileirar(fila, proximaPosicao, "B"); // enfileira elemento B / proximaPosicao = 1
