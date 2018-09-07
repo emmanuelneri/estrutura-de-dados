@@ -1,0 +1,38 @@
+package br.com.emmanuelneri.pilhas;
+
+import java.util.Arrays;
+
+public class EmpilharComValidacaoNaPilha {
+
+    public static void main(String args[]) {
+
+        String[] pilha = new String[10]; // Cria um array de 10 posições
+        int topo = 0;// inicializa variável com a posição topo da pilha, iniciando em zero
+
+        topo = empilhar(pilha, topo, "A"); // empilha elemento A / topo = 0
+        topo = empilhar(pilha, topo, "B"); // empilha elemento B / topo = 1
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 2
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 3
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 4
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 5
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 6
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 7
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 8
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 9
+        topo = empilhar(pilha, topo, "C"); // empilha elemento B / topo = 10
+
+        System.out.println(Arrays.toString(pilha)); // Apresenta valores do array
+        // Resultado: [java.lang.RuntimeException: Tamanho máximo da pilha atingido
+    }
+
+    // Método genérico para empilhar elemento na pilha de acordo com o topo
+    public static int empilhar(String[] pilha, int topo, String elemento) {
+        if(topo >= pilha.length) { // verifica se o topo é maior ou igual o tamanho da pilha
+            throw new RuntimeException("Tamanho máximo da pilha atingido"); // caso for verdadeiro, retornar uma mensagem que o tamanho máximos da pilha foi atingido
+        }
+
+        pilha[topo] = elemento; // inserer elemento no topo da pilha
+        return topo + 1; // conta mais um na posição do topo
+    }
+
+}
