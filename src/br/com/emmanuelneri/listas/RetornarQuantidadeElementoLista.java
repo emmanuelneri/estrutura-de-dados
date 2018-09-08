@@ -9,7 +9,7 @@ public class RetornarQuantidadeElementoLista {
 
         int quantidade = retornarQuantidadeDeElementos(lista);// retorna a quantidade de elementos da lista
 
-        System.out.println(quantidade); // Apresenta Apresenta a quantidade de elementos
+        System.out.println(quantidade); // Apresenta a quantidade de elementos
 
     }
 
@@ -23,7 +23,7 @@ public class RetornarQuantidadeElementoLista {
             }
         }
 
-        return quantidade; // retorna a quanidade
+        return quantidade; // retorna a qunatidade
     }
 
 }
