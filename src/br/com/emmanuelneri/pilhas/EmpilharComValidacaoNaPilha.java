@@ -8,7 +8,7 @@ public class EmpilharComValidacaoNaPilha {
     public static void main(String args[]) {
 
         String[] pilha = new String[10]; // Cria um array de 10 posições
-        int topo = 0;// inicializa variável com a posição topo da pilha, iniciando em zero
+        Integer topo = 0;// inicializa variável com a posição topo da pilha, iniciando com nulo
 
         topo = empilhar(pilha, topo, "A"); // empilha elemento A / topo = 0
         topo = empilhar(pilha, topo, "B"); // empilha elemento B / topo = 1
@@ -27,13 +27,19 @@ public class EmpilharComValidacaoNaPilha {
     }
 
     // Método genérico para empilhar elemento na pilha de acordo com o topo
-    public static int empilhar(String[] pilha, int topo, String elemento) {
+    public static int empilhar(String[] pilha, Integer topo, String elemento) {
+        if(topo == null) { // verifica se tem algum elemento no topo da linha
+            topo = 0; // caso verdadeiro, inicializa topo com posição zero
+        } else {
+            topo = topo + 1; // caso falso, topo recebe o topo mais um
+        }
+
         if(topo >= pilha.length) { // verifica se o topo é maior ou igual o tamanho da pilha
             throw new RuntimeException("Tamanho máximo da pilha atingido"); // caso for verdadeiro, retornar uma mensagem que o tamanho máximos da pilha foi atingido
         }
 
         pilha[topo] = elemento; // inserer elemento no topo da pilha
-        return topo + 1; // conta mais um na posição do topo
+        return topo; // retorna posição do topo
     }
 
 }
