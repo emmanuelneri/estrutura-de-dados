@@ -2,6 +2,7 @@ package br.com.emmanuelneri.pilhas;
 
 import java.util.Arrays;
 
+// Empilhar (inserir) elementos da pilha
 public class EmpilharNaPilha {
 
     public static void main(String args[]) {

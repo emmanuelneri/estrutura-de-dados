@@ -13,7 +13,7 @@ public class RetornarQuantidadeElementoLista {
 
     }
 
-    // Método para retornar elemento da posição informada
+    // Método para retornar quantidade de elementos de uma lista
     public static int retornarQuantidadeDeElementos(String[] lista) {
         int quantidade = 0; // inicializa variável para contar a quantidade de elementos com zero
 

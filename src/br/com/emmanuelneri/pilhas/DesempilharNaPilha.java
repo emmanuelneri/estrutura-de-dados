@@ -2,6 +2,7 @@ package br.com.emmanuelneri.pilhas;
 
 import java.util.Arrays;
 
+// Desempilhar (remover) elementos da pilha
 public class DesempilharNaPilha {
 
     public static void main(String args[]) {

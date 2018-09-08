@@ -2,6 +2,7 @@ package br.com.emmanuelneri.pilhas;
 
 import java.util.Arrays;
 
+// Desempilhar (remover) elementos da pilha com validação quando a pilha estiver vazia
 public class DesempilharComValidacaoNaPilha {
 
     public static void main(String args[]) {

@@ -2,6 +2,7 @@ package br.com.emmanuelneri.pilhas;
 
 import java.util.Arrays;
 
+// Empilhar (inserir) elementos da pilha com validação para não ultrapassar o limite de itens da pilha
 public class EmpilharComValidacaoNaPilha {
 
     public static void main(String args[]) {
