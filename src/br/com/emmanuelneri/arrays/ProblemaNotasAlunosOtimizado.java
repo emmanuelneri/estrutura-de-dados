@@ -16,6 +16,7 @@ public class ProblemaNotasAlunosOtimizado {
         imprimirNotas(notasAlunos); // Imprime as notas dos alunos
     }
 
+    // método para imprimir notas de acordo com array bidimensional passado por parâmetro
     private static void imprimirNotas(int[][] notasAlunos) {
         for(int i = 0; i < notasAlunos.length; i++) { // percorre as linhas do array de notasAlunos
             String notas = ""; // criar uma variável notas do tipo texto

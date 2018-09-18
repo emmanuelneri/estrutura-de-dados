@@ -12,7 +12,7 @@ public class ProblemaApresentarRepetidos {
 
         for (int i = 0; i < numeros.length; i++) { // percorre o array de números para popular com números aleatórios
             numeros[i] = (int)(Math.random() * 15); // atribuir valor na posição i com algum número aleatório até 15
-//            numeros[i] = new Random().nextInt(15); uma alternativa ao Math.random é o new Random().nextInt
+//            numeros[i] = new Random().nextInt(15);  alternativa ao Math.random é o new Random().nextInt, que já retorna um int
         }
 
         String elementosDoArray = ""; //inicializa variável para apresenta todos elementos do array
@@ -29,7 +29,7 @@ public class ProblemaApresentarRepetidos {
         }
 
         System.out.println("Todos elementos: "  + elementosDoArray); // apresenta todos elementos
-        System.out.println("Elementos repetidos: " + elementosRepetidos); // apresenta elementos repetidos
+        System.out.println("Elementos repetidos: " + elementosRepetidos); // apresenta os elementos repetidos
     }
 
 }

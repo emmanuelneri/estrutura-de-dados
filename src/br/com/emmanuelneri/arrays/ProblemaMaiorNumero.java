@@ -16,8 +16,8 @@ public class ProblemaMaiorNumero {
         int maior = numeros[0]; // inicializa a variável maior com a primeira posição do array
 
         for(int i = 0; i < numeros.length; i++) {  // percorre o array de número
-           if(numeros[i] > maior) {  // verifica se o número na posição i é maior que o número da variável maior
-               maior = numeros[i]; // caso for verdadeiro, atribui o número da posição i na variável maior
+           if(numeros[i] > maior) {  // verifica se o valor na posição i é maior que o número da variável maior
+               maior = numeros[i]; // caso for verdadeiro, atribui o valor da posição i na variável maior
            }
         }
 
