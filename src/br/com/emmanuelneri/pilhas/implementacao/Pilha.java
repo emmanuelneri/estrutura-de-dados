@@ -12,7 +12,7 @@ public class Pilha {
 
     /**
      * Variável para controlar o topo da pilha
-     * Obs: iniciando por nulo
+     * Obs: iniciado com nulo
      */
     private Integer topo = null;
 
