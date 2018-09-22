@@ -8,7 +8,7 @@ public class Pilha {
     /**
      * Array para armazenar os elementos da elementos
      */
-    private Integer[] elementos = new Integer[20];
+    private Integer[] elementos = new Integer[10];
 
     /**
      * Variável para controlar o topo da pilha
@@ -24,15 +24,14 @@ public class Pilha {
      * @param elemento: valor a ser inserido na pilha
      */
     public void empilhar(Integer elemento) {
-        if(topo == null) {
-            topo = 0;
-        } else {
-            topo = topo + 1;
+        if(estaCheia()) {
+            return;
         }
 
-        if(topo >= elementos.length) {
-            throw new RuntimeException("Tamanho máximo da elementos atingido");
-
+        if (topo == null) {
+            topo = 0;
+        }  else {
+            topo = topo + 1;
         }
 
         elementos[topo] = elemento;
@@ -46,7 +45,7 @@ public class Pilha {
      * @return: retorna o elemento removido
      */
     public Integer desempilhar() {
-        if(topo == null) {
+        if(estaVazia()) {
             return null;
         }
 
