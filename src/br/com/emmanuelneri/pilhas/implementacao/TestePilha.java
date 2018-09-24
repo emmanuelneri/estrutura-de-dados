@@ -20,7 +20,7 @@ public class TestePilha {
 
         pilha.empilhar(pilha.topo());
 
-        Integer desempilhar = pilha.desempilhar();
+        pilha.desempilhar();
         pilha.desempilhar();
 
         System.out.println("Apresentar o topo da pilha: " + pilha.topo());

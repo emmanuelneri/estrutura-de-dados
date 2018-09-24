@@ -80,6 +80,10 @@ public class Pilha {
      * @return: retorna o elemento do topo da pilha
      */
     public Integer topo() {
+        if(topo == null) {
+            return null;
+        }
+
         return elementos[topo];
     }
 
