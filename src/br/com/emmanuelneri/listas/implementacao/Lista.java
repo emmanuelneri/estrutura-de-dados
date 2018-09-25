@@ -17,6 +17,10 @@ public class Lista {
      * @param elemento : Elemento a ser inserido na posição
      */
     public void inserirPorPosicao(int posicao, Integer elemento) {
+        if(estaCheia()) {
+            return;
+        }
+
         elementos[posicao] = elemento;
     }
 
