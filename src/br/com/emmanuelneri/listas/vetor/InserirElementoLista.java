@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas;
+package br.com.emmanuelneri.listas.vetor;
 
 import java.util.Arrays;
 

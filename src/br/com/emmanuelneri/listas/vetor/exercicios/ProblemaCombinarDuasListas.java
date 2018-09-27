@@ -1,8 +1,6 @@
-package br.com.emmanuelneri.listas.exercicios;
+package br.com.emmanuelneri.listas.vetor.exercicios;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 //Combinar duas listas de 10 elementos em uma lista de 20 elementos
 public class ProblemaCombinarDuasListas {

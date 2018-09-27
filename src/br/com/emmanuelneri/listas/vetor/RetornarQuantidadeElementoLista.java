@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas;
+package br.com.emmanuelneri.listas.vetor;
 
 // Retornar quantidade de elementos da lista
 public class RetornarQuantidadeElementoLista {
