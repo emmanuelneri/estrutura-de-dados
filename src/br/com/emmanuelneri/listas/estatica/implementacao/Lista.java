@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas.vetor.implementacao;
+package br.com.emmanuelneri.listas.estatica.implementacao;
 
 /**
  * Implementação da estrutura de dados Lista

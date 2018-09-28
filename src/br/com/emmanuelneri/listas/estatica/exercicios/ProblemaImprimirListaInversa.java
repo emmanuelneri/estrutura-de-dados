@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas.vetor.exercicios;
+package br.com.emmanuelneri.listas.estatica.exercicios;
 
 //Imprima 10 elementos de uma lista na ordem inversa
 public class ProblemaImprimirListaInversa {

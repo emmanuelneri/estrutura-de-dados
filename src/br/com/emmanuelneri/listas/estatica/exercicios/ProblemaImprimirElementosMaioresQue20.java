@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas.vetor.exercicios;
+package br.com.emmanuelneri.listas.estatica.exercicios;
 
 //Dado uma lista de 10 elementos inteiros retorne todos elementos que são maior que 20
 public class ProblemaImprimirElementosMaioresQue20 {

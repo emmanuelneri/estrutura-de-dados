@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas.vetor.exercicios;
+package br.com.emmanuelneri.listas.estatica.exercicios;
 
 import java.util.Arrays;
 

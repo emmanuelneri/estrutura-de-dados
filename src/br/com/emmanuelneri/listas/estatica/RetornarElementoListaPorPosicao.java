@@ -1,6 +1,4 @@
-package br.com.emmanuelneri.listas.vetor;
-
-import java.util.Arrays;
+package br.com.emmanuelneri.listas.estatica;
 
 // Remover um elemento na lista por posição
 public class RetornarElementoListaPorPosicao {

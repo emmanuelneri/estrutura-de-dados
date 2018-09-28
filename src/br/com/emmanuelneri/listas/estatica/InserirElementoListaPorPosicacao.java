@@ -1,6 +1,5 @@
-package br.com.emmanuelneri.listas.vetor;
+package br.com.emmanuelneri.listas.estatica;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 // Inserir um elemento na lista passando uma posição

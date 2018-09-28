@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.listas.vetor.implementacao;
+package br.com.emmanuelneri.listas.estatica.implementacao;
 
 // Classe com objetivo de testar a implementação de lista
 public class TesteLista {
