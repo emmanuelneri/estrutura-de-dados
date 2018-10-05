@@ -37,12 +37,12 @@ Feito isso, acesse o projeto:
 cd estrutura-de-dados
 ```
 
-Na sequência, execute o comandos abaixo para instalar suas dependências do projeto:
+Na sequência, execute o comando abaixo para instalar suas dependências do projeto:
 ```
 mvn clean install
 ```
 
-Pronto! Agora apenas importar o projeto na sua IDE.
+Pronto! Agora, apenas importar o estrutura-de-dado projeto na sua IDE.
 
 
 
