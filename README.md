@@ -7,8 +7,8 @@ Exemplos e execícios desenvolvidos na diciplína de Estruturas de Dados
   - Estáticas
      - [Listas (Vetor)](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas/estatica)
   - Dinâmicas
-     - [Listas Encadeadas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas/dinamicas/encadeadas)
-     - [Listas Duplamente Encadeadas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas/dinamicas/duplamenteencadeada)
+     - [Listas Encadeadas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas/dinamica/encadeadas)
+     - [Listas Duplamente Encadeadas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas/dinamica/duplamenteencadeada)
 - [Filas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/filas)
 - [Pilhas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/pilhas)
 
