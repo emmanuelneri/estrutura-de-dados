@@ -50,7 +50,7 @@ public class ListaEncadeadaTest {
     }
 
     @Test
-    public void inserirPorPosicaoDeveDeslocarOValorDaPosicaoInseriadaParaProximoEInserirValorInformadoNaPosicaoInformada() {
+    public void inserirPorPosicaoDeveSubstituirOValorDaPosicaoInseriadaParaProximoEInserirValorInformadoNaPosicaoInformada() {
         final ListaEncadeada listaEncadeada = new ListaEncadeada();
 
         listaEncadeada.inserirNaPosicao(0, 1);
@@ -63,12 +63,8 @@ public class ListaEncadeadaTest {
         final NoEncadeado segundo = primeiro.getProximo();
         Assert.assertEquals(10, segundo.getElemento());
 
-        final NoEncadeado terceiro = segundo.getProximo();
-        Assert.assertEquals(2, terceiro.getElemento());
-        Assert.assertNull(terceiro.getProximo());
-
-        Assert.assertEquals(terceiro, listaEncadeada.getUltimo());
-        Assert.assertEquals(3, listaEncadeada.retornarQuantidadeDeElementos());
+        Assert.assertEquals(segundo, listaEncadeada.getUltimo());
+        Assert.assertEquals(2, listaEncadeada.retornarQuantidadeDeElementos());
     }
 
     @Test(expected = RuntimeException.class)
@@ -155,13 +151,14 @@ public class ListaEncadeadaTest {
         listaEncadeada.inserirNoInicio(1);
         listaEncadeada.inserirNoInicio(2);
         listaEncadeada.inserirNoFinal(3);
-        listaEncadeada.inserirNaPosicao(1, 4);
+        listaEncadeada.inserirNaPosicao(2, 4);
+        listaEncadeada.inserirNaPosicao(3, 5);
 
         listaEncadeada.removerNoInicio();
         listaEncadeada.removerNaPosicao(1);
         listaEncadeada.removerNoFinal();
 
-        Assert.assertEquals("[4]", listaEncadeada.retornarElementos());
+        Assert.assertEquals("[1]", listaEncadeada.retornarElementos());
     }
 
 }

@@ -34,7 +34,7 @@ public class ListaEncadeada {
     }
 
     /**
-     * Insere elemento na posição informada e move elemento da atual para próxima posição
+     * Insere elemento na posição, substituindo elemento atual
      *
      * @param posicao
      * @param elemento
@@ -45,12 +45,8 @@ public class ListaEncadeada {
         } else if(posicao == quantidade) {
             inserirNoFinal(elemento);
         } else {
-            NoEncadeado noNaPosicaoAnterior = buscarNoNaPosicao(posicao - 1);
-            NoEncadeado no = new NoEncadeado();
-            no.setElemento(elemento);
-            no.setProximo(noNaPosicaoAnterior.getProximo());
-            noNaPosicaoAnterior.setProximo(no);
-            quantidade++;
+            NoEncadeado noNaPosicao = buscarNoNaPosicao(posicao);
+            noNaPosicao.setElemento(elemento);
         }
     }
 
