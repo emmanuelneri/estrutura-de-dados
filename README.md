@@ -1,3 +1,6 @@
+![Build](https://travis-ci.org/emmanuelneri/estrutura-de-dados.svg?branch=master)
+
+
 # estrutura-de-dados
 
 Exemplos e execícios desenvolvidos na diciplína de Estruturas de Dados
@@ -23,7 +26,7 @@ Java 8
 maven 3 ou superior
 ```
 
-Obs: [Link para donwload do Maven](https://maven.apache.org/download.cgi)
+Obs: [Link para download do Maven](https://maven.apache.org/download.cgi)
 
 ## Instalação
 
@@ -42,7 +45,7 @@ Na sequência, execute o comando abaixo para instalar suas dependências do proj
 mvn clean install
 ```
 
-Pronto! Agora, apenas importar o estrutura-de-dado projeto na sua IDE.
+Pronto! Agora, apenas importar o projeto `estrutura-de-dados`como projeto maven na sua IDE.
 
 
 
