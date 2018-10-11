@@ -1,25 +1,22 @@
-package br.com.emmanuelneri.listas.dinamica.encadeadas.implementacao;
+package br.com.emmanuelneri.listas.dinamica.duplamenteencadeada.implementacao;
 
-/**
- * Implementação da estrutura de dados Lista Encadeada
- *
- * Implementação utilizando primeiro (head) e último nó da lista
- */
-public class ListaEncadeada {
+public class ListaDuplamententeEncadeada {
 
-    private NoEncadeado primeiro = null;
-    private NoEncadeado ultimo = null;
+    private NoDuplamenteEncadeado primeiro = null;
+    private NoDuplamenteEncadeado ultimo = null;
     private int quantidade = 0;
 
     public void inserirNoInicio(int elemento) {
-        NoEncadeado no = new NoEncadeado();
+        NoDuplamenteEncadeado no = new NoDuplamenteEncadeado();
         no.setElemento(elemento);
-        no.setProximo(primeiro);
-
-        primeiro = no;
 
         if(quantidade == 0) {
-            ultimo = primeiro;
+            primeiro = no;
+            ultimo = no;
+        } else {
+            no.setProximo(primeiro);
+            primeiro.setAnterior(no);
+            primeiro = no;
         }
 
         quantidade++;
@@ -29,10 +26,10 @@ public class ListaEncadeada {
         if(quantidade == 0) {
             inserirNoInicio(elemento);
         } else {
-            NoEncadeado no = new NoEncadeado();
+            NoDuplamenteEncadeado no = new NoDuplamenteEncadeado();
             no.setElemento(elemento);
-            no.setProximo(null);
             ultimo.setProximo(no);
+            no.setAnterior(ultimo);
             ultimo = no;
             quantidade++;
         }
@@ -50,10 +47,11 @@ public class ListaEncadeada {
         } else if(posicao == quantidade) {
             inserirNoFinal(elemento);
         } else {
-            NoEncadeado noNaPosicao = buscarNoNaPosicao(posicao);
+            NoDuplamenteEncadeado noNaPosicao = buscarNoNaPosicao(posicao);
             noNaPosicao.setElemento(elemento);
         }
     }
+
 
     public void removerNoInicio() {
         if(quantidade == 0) {
@@ -61,6 +59,7 @@ public class ListaEncadeada {
         }
 
         primeiro = primeiro.getProximo();
+        primeiro.setAnterior(null);
         quantidade--;
 
         if(quantidade == 0) {
@@ -75,13 +74,12 @@ public class ListaEncadeada {
 
         if(quantidade == 1) {
             removerNoInicio();
+        } else {
+            NoDuplamenteEncadeado anterior = ultimo.getAnterior();
+            anterior.setProximo(null);
+            ultimo = anterior;
+            quantidade--;
         }
-
-        NoEncadeado noNaPosicaoAnterior = buscarNoNaPosicao(quantidade - 2);
-        noNaPosicaoAnterior.setProximo(null);
-
-        ultimo = noNaPosicaoAnterior;
-        quantidade--;
     }
 
     public void removerNaPosicao(int posicao) {
@@ -90,26 +88,29 @@ public class ListaEncadeada {
         } else if(posicao == quantidade) {
             removerNoFinal();
         } else {
-            NoEncadeado noNaPosicaoAnterior = buscarNoNaPosicao(posicao - 1);
-            NoEncadeado noNaPosicaoAtual = noNaPosicaoAnterior.getProximo();
+            NoDuplamenteEncadeado noNaPosicaoAtual = buscarNoNaPosicao(posicao);
+            NoDuplamenteEncadeado noNaPosicaoAnterior = noNaPosicaoAtual.getAnterior();
 
-            if(noNaPosicaoAtual.getProximo() != null) {
-                noNaPosicaoAnterior.setProximo(noNaPosicaoAtual.getProximo());
+            NoDuplamenteEncadeado proximo = noNaPosicaoAtual.getProximo();
+            if(proximo != null) {
+                noNaPosicaoAnterior.setProximo(proximo);
+                proximo.setAnterior(noNaPosicaoAnterior);
             } else {
                 noNaPosicaoAnterior.setProximo(null);
                 ultimo = noNaPosicaoAnterior;
             }
 
+
             quantidade--;
         }
     }
 
-    public NoEncadeado buscarNoNaPosicao(int posicao) {
+    public NoDuplamenteEncadeado buscarNoNaPosicao(int posicao) {
         if(!existeElementoNaPosicao(posicao)) {
             throw new RuntimeException("Posição não existente");
         }
 
-        NoEncadeado atual = primeiro;
+        NoDuplamenteEncadeado atual = primeiro;
 
         for (int i = 0; i < posicao; i++) {
             atual = atual.getProximo();
@@ -117,32 +118,28 @@ public class ListaEncadeada {
         return atual;
     }
 
-    public Integer retonarElementoPorPosicao(int posicao) {
-        return buscarNoNaPosicao(posicao).getElemento();
+    private boolean existeElementoNaPosicao(int posicao){
+        return posicao >= 0 && posicao < quantidade;
     }
 
     public int retornarQuantidadeDeElementos() {
         return quantidade;
     }
 
-    private boolean existeElementoNaPosicao(int posicao){
-        return posicao >= 0 && posicao < quantidade;
-    }
-
     public void imprimir() {
         if(quantidade == 0) {
-            System.out.println("[]");
+            System.out.println("[ ]");
             return;
         }
 
         String elementos = retornarElementos();
-        System.out.println(elementos);
+        System.out.println(elementos.toString());
     }
 
     String retornarElementos() {
         StringBuilder elementos = new StringBuilder("[");
 
-        NoEncadeado atual = primeiro;
+        NoDuplamenteEncadeado atual = primeiro;
 
         while (atual.getProximo() != null) {
             elementos.append(atual.getElemento());
@@ -153,15 +150,14 @@ public class ListaEncadeada {
         elementos.append(ultimo.getElemento());
 
         elementos.append("]");
-
         return elementos.toString();
     }
 
-    public NoEncadeado getPrimeiro() {
+    public NoDuplamenteEncadeado getPrimeiro() {
         return primeiro;
     }
 
-    public NoEncadeado getUltimo() {
+    public NoDuplamenteEncadeado getUltimo() {
         return ultimo;
     }
 }
