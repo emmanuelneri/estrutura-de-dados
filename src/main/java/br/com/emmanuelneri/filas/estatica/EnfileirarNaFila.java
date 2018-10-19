@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.filas;
+package br.com.emmanuelneri.filas.estatica;
 
 import java.util.Arrays;
 

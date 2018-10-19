@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.filas.implementacao;
+package br.com.emmanuelneri.filas.estatica.implementacao;
 
 import java.util.Random;
 

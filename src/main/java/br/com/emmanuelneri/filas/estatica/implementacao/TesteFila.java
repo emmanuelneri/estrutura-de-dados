@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.filas.implementacao;
+package br.com.emmanuelneri.filas.estatica.implementacao;
 
 // Classe com objetivo de testar a implementação de fila
 public class TesteFila {

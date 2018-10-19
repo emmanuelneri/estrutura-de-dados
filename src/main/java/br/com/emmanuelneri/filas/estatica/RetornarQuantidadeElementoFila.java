@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.filas;
+package br.com.emmanuelneri.filas.estatica;
 
 // Retornar quantidade de elementos da fila
 public class RetornarQuantidadeElementoFila {
