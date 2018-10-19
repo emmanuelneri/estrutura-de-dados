@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.pilhas.implementacao;
+package br.com.emmanuelneri.pilhas.estatica.implementacao;
 
 public class TestePilha {
 

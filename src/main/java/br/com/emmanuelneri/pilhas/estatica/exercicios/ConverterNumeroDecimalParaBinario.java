@@ -1,6 +1,6 @@
-package br.com.emmanuelneri.pilhas.exercicios;
+package br.com.emmanuelneri.pilhas.estatica.exercicios;
 
-import br.com.emmanuelneri.pilhas.implementacao.Pilha;
+import br.com.emmanuelneri.pilhas.estatica.implementacao.Pilha;
 
 // Fazer um algoritmo para converter de decimal para binário utilizando pilha
 public class ConverterNumeroDecimalParaBinario {

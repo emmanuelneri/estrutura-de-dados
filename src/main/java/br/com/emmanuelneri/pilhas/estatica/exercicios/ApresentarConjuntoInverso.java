@@ -1,6 +1,6 @@
-package br.com.emmanuelneri.pilhas.exercicios;
+package br.com.emmanuelneri.pilhas.estatica.exercicios;
 
-import br.com.emmanuelneri.pilhas.implementacao.Pilha;
+import br.com.emmanuelneri.pilhas.estatica.implementacao.Pilha;
 
 //Dados o conjunto de dados {10, 20, 30, 40, 50} imprima os valores na ordem invertida utilizando a estrutura de dados pilha
 public class ApresentarConjuntoInverso {

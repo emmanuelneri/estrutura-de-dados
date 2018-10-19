@@ -1,4 +1,4 @@
-package br.com.emmanuelneri.pilhas;
+package br.com.emmanuelneri.pilhas.estatica;
 
 import java.util.Arrays;
 
