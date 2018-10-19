@@ -147,7 +147,7 @@ public class ListaDuplamententeEncadeada {
             atual = atual.getProximo();
         }
 
-        elementos.append(ultimo.getElemento());
+        elementos.append(atual.getElemento());
 
         elementos.append("]");
         return elementos.toString();

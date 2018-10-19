@@ -150,7 +150,7 @@ public class ListaEncadeada {
             atual = atual.getProximo();
         }
 
-        elementos.append(ultimo.getElemento());
+        elementos.append(atual.getElemento());
 
         elementos.append("]");
 
