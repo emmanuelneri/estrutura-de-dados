@@ -90,6 +90,22 @@ public class ListaEncadeadaApenasPrimeiroTest {
     }
 
     @Test
+    public void deveRemover3ElementosDoFinalEmUmaListaDe3Elementos() {
+        final ListaEncadeadaApenasPrimeiro listaEncadeada = new ListaEncadeadaApenasPrimeiro();
+
+        listaEncadeada.inserirNoFinal(1);
+        listaEncadeada.inserirNoFinal(2);
+        listaEncadeada.inserirNoFinal(3);
+
+        listaEncadeada.removerNoFinal();
+        listaEncadeada.removerNoFinal();
+        listaEncadeada.removerNoFinal();
+
+        final NoEncadeado primeiro = listaEncadeada.getPrimeiro();
+        Assert.assertNull(primeiro);
+    }
+
+    @Test
     public void deveRemover2ElementosDoFinalEmUmaListaDe3Elementos() {
         final ListaEncadeadaApenasPrimeiro listaEncadeada = new ListaEncadeadaApenasPrimeiro();
 

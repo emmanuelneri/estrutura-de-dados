@@ -112,6 +112,22 @@ public class ListaEncadeadaTest {
     }
 
     @Test
+    public void deveRemover3ElementosDoFinalEmUmaListaDe3Elementos() {
+        final ListaEncadeada listaEncadeada = new ListaEncadeada();
+
+        listaEncadeada.inserirNoFinal(1);
+        listaEncadeada.inserirNoFinal(2);
+        listaEncadeada.inserirNoFinal(3);
+
+        listaEncadeada.removerNoFinal();
+        listaEncadeada.removerNoFinal();
+        listaEncadeada.removerNoFinal();
+
+        final NoEncadeado primeiro = listaEncadeada.getPrimeiro();
+        Assert.assertNull(primeiro);
+    }
+
+    @Test
     public void deveRemoverUmElementoPorPosicaoEmUmaListaDe3Elementos() {
         final ListaEncadeada listaEncadeada = new ListaEncadeada();
 

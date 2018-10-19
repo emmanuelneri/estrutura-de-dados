@@ -67,6 +67,7 @@ public class ListaEncadeadaApenasPrimeiro {
 
         if(quantidade == 1) {
             removerNoInicio();
+            return;
         }
 
         NoEncadeado noNaPosicaoAnterior = buscarNoNaPosicao(quantidade - 2);
