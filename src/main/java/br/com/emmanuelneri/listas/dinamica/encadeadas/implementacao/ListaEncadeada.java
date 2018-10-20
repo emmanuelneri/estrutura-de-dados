@@ -12,11 +12,11 @@ public class ListaEncadeada {
     private int quantidade = 0;
 
     public void inserirNoInicio(int elemento) {
-        NoEncadeado no = new NoEncadeado();
-        no.setElemento(elemento);
-        no.setProximo(primeiro);
+        NoEncadeado novoNo = new NoEncadeado();
+        novoNo.setElemento(elemento);
+        novoNo.setProximo(primeiro);
 
-        primeiro = no;
+        primeiro = novoNo;
 
         if(quantidade == 0) {
             ultimo = primeiro;
@@ -29,11 +29,11 @@ public class ListaEncadeada {
         if(quantidade == 0) {
             inserirNoInicio(elemento);
         } else {
-            NoEncadeado no = new NoEncadeado();
-            no.setElemento(elemento);
-            no.setProximo(null);
-            ultimo.setProximo(no);
-            ultimo = no;
+            NoEncadeado novoNo = new NoEncadeado();
+            novoNo.setElemento(elemento);
+            novoNo.setProximo(null);
+            ultimo.setProximo(novoNo);
+            ultimo = novoNo;
             quantidade++;
         }
     }
