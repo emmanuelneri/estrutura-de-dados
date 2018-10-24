@@ -9,15 +9,15 @@ public class ListaDuplamententeEncadeada {
     public void inserirNoInicio(int elemento) {
         NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado();
         novoNo.setElemento(elemento);
+        novoNo.setProximo(primeiro);
 
         if(quantidade == 0) {
-            primeiro = novoNo;
             ultimo = novoNo;
         } else {
-            novoNo.setProximo(primeiro);
             primeiro.setAnterior(novoNo);
-            primeiro = novoNo;
         }
+
+        primeiro = novoNo;
 
         quantidade++;
     }
@@ -28,8 +28,9 @@ public class ListaDuplamententeEncadeada {
         } else {
             NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado();
             novoNo.setElemento(elemento);
-            ultimo.setProximo(novoNo);
+            novoNo.setProximo(null);
             novoNo.setAnterior(ultimo);
+            ultimo.setProximo(novoNo);
             ultimo = novoNo;
             quantidade++;
         }
