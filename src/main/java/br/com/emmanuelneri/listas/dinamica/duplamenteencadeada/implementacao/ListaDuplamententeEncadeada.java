@@ -7,16 +7,16 @@ public class ListaDuplamententeEncadeada {
     private int quantidade = 0;
 
     public void inserirNoInicio(int elemento) {
-        NoDuplamenteEncadeado no = new NoDuplamenteEncadeado();
-        no.setElemento(elemento);
+        NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado();
+        novoNo.setElemento(elemento);
 
         if(quantidade == 0) {
-            primeiro = no;
-            ultimo = no;
+            primeiro = novoNo;
+            ultimo = novoNo;
         } else {
-            no.setProximo(primeiro);
-            primeiro.setAnterior(no);
-            primeiro = no;
+            novoNo.setProximo(primeiro);
+            primeiro.setAnterior(novoNo);
+            primeiro = novoNo;
         }
 
         quantidade++;
@@ -26,11 +26,11 @@ public class ListaDuplamententeEncadeada {
         if(quantidade == 0) {
             inserirNoInicio(elemento);
         } else {
-            NoDuplamenteEncadeado no = new NoDuplamenteEncadeado();
-            no.setElemento(elemento);
-            ultimo.setProximo(no);
-            no.setAnterior(ultimo);
-            ultimo = no;
+            NoDuplamenteEncadeado novoNo = new NoDuplamenteEncadeado();
+            novoNo.setElemento(elemento);
+            ultimo.setProximo(novoNo);
+            novoNo.setAnterior(ultimo);
+            ultimo = novoNo;
             quantidade++;
         }
     }
