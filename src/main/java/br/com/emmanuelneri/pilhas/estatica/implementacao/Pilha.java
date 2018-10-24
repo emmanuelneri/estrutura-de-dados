@@ -1,7 +1,7 @@
 package br.com.emmanuelneri.pilhas.estatica.implementacao;
 
 /**
- * Implementação da estrutura de dados Lista
+ * Implementação da estrutura de dados Pilha
  */
 public class Pilha {
 
