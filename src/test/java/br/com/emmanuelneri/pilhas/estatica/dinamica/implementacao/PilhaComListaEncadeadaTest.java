@@ -48,6 +48,7 @@ public class PilhaComListaEncadeadaTest {
 
         Assert.assertEquals("[]", pilha.imprimir());
         Assert.assertEquals(0, pilha.retornarQuantidadeDeElementos());
+        Assert.assertNull(pilha.getUltimo());
     }
 
     @Test

@@ -80,4 +80,7 @@ public class PilhaComListaEncadeada {
         return elementos.toString();
     }
 
+    public NoDuplamenteEncadeado getUltimo() {
+        return ultimo;
+    }
 }
