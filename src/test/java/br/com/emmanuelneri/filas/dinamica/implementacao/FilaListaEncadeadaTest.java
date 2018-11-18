@@ -32,6 +32,8 @@ public class FilaListaEncadeadaTest {
 
         Assert.assertEquals("[30]", fila.imprimir());
         Assert.assertEquals(1, fila.retornarQuantidadeDeElementos());
+        Assert.assertNotNull(fila.getPrimeiro());
+        Assert.assertNotNull(fila.getUltimo());
     }
 
     @Test
@@ -47,6 +49,8 @@ public class FilaListaEncadeadaTest {
         fila.desenfileirar();
 
         Assert.assertEquals(0, fila.retornarQuantidadeDeElementos());
+        Assert.assertNull(fila.getPrimeiro());
+        Assert.assertNull(fila.getUltimo());
     }
 
     @Test

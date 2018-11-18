@@ -34,6 +34,10 @@ public class FilaListaEncadeada {
 
         primeiro = primeiro.getProximo();
         quantidade--;
+
+        if(quantidade == 0) {
+            ultimo = null;
+        }
     }
 
 
@@ -77,5 +81,13 @@ public class FilaListaEncadeada {
         System.out.println(elementos.toString());
 
         return elementos.toString();
+    }
+
+    public NoEncadeado getPrimeiro() {
+        return primeiro;
+    }
+
+    public NoEncadeado getUltimo() {
+        return ultimo;
     }
 }
