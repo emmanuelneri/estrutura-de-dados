@@ -16,7 +16,7 @@ public class ArvoreTest {
         Assert.assertNull(raiz.getPai());
         Assert.assertNull(raiz.getFilhos());
         Assert.assertEquals(1, arvore.retornarQuantidadeDeNos());
-        Assert.assertEquals("(RAIZ)", arvore.apresentarNos().toString());
+        Assert.assertEquals("(RAIZ)", arvore.imprimir().toString());
     }
 
     @Test
@@ -42,7 +42,7 @@ public class ArvoreTest {
 
         Assert.assertNull(raiz.getPai());
         Assert.assertEquals(3, arvore.retornarQuantidadeDeNos());
-        Assert.assertEquals("(RAIZ(FILHO 1)(FILHO 2))", arvore.apresentarNos().toString());
+        Assert.assertEquals("(RAIZ(FILHO 1)(FILHO 2))", arvore.imprimir().toString());
     }
 
     @Test
@@ -55,7 +55,7 @@ public class ArvoreTest {
         arvore.remover(raiz);
 
         Assert.assertEquals(0, arvore.retornarQuantidadeDeNos());
-        Assert.assertEquals("()", arvore.apresentarNos().toString());
+        Assert.assertEquals("()", arvore.imprimir().toString());
     }
 
     @Test
@@ -70,7 +70,7 @@ public class ArvoreTest {
         arvore.remover(filho1);
 
         Assert.assertEquals(2, arvore.retornarQuantidadeDeNos());
-        Assert.assertEquals("(RAIZ(FILHO 2))", arvore.apresentarNos().toString());
+        Assert.assertEquals("(RAIZ(FILHO 2))", arvore.imprimir().toString());
     }
 
     @Test
@@ -100,7 +100,7 @@ public class ArvoreTest {
         Assert.assertEquals(raiz, b12AposRemoverB1.getPai());
 
         Assert.assertEquals(4, arvore.retornarQuantidadeDeNos());
-        Assert.assertEquals("(B(B2)(B1.1)(B1.2))", arvore.apresentarNos().toString());
+        Assert.assertEquals("(B(B2)(B1.1)(B1.2))", arvore.imprimir().toString());
     }
 
     @Test
@@ -121,7 +121,7 @@ public class ArvoreTest {
 
         arvore.inserir(b111, "B1.1.1");
 
-        Assert.assertEquals("(B(B1(B1.1(B1.1.1))(B1.2))(B2)(B3(B3.1)(B3.2)(B3.3)))", arvore.apresentarNos().toString());
+        Assert.assertEquals("(B(B1(B1.1(B1.1.1))(B1.2))(B2)(B3(B3.1)(B3.2)(B3.3)))", arvore.imprimir().toString());
         Assert.assertEquals(10, arvore.retornarQuantidadeDeNos());
     }
 
@@ -167,7 +167,7 @@ public class ArvoreTest {
         arvore.inserir(b2, "B2.1");
         arvore.inserir(b2, "B2.2");
 
-        Assert.assertEquals("(B(B1(B1.1)(B1.2))(B2(B2.1)(B2.2)))", arvore.apresentarNos().toString());
+        Assert.assertEquals("(B(B1(B1.1)(B1.2))(B2(B2.1)(B2.2)))", arvore.imprimir().toString());
         Assert.assertEquals(7, arvore.retornarQuantidadeDeNos());
     }
 

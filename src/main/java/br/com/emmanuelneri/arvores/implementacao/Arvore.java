@@ -107,14 +107,11 @@ public class Arvore {
         return quantidade;
     }
 
-    public void imprimir() {
-        StringBuilder elementos = apresentarNos();
-        System.out.println(elementos.toString());
-    }
-
-    StringBuilder apresentarNos() {
+    public String imprimir() {
         if(raiz == null) {
-            return new StringBuilder("()");
+            String vazio = "()";
+            System.out.println(vazio);
+            return vazio;
         }
 
         StringBuilder elementos = new StringBuilder();
@@ -123,8 +120,12 @@ public class Arvore {
         elementos.append(raiz.getValor());
         apresentarNosFilhos(raiz, elementos);
         elementos.append(")");
-        return elementos;
+
+        System.out.println(elementos.toString());
+
+        return elementos.toString();
     }
+
 
     private void apresentarNosFilhos(NoArvore pai, StringBuilder elementos) {
         if(pai.getFilhos() != null) {
