@@ -33,6 +33,10 @@ public class PilhaComListaEncadeada {
         int valorDesempilhado = ultimo.getElemento();
 
         ultimo = ultimo.getAnterior();
+        if(ultimo != null) {
+            ultimo.setProximo(null);
+        }
+
         quantidade--;
 
         return valorDesempilhado;

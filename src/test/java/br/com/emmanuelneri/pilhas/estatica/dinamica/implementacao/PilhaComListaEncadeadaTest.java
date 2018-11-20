@@ -17,6 +17,9 @@ public class PilhaComListaEncadeadaTest {
 
         Assert.assertEquals("[10 20 30]", pilha.imprimir());
         Assert.assertEquals(3, pilha.retornarQuantidadeDeElementos());
+        Assert.assertNull(pilha.getUltimo().getProximo());
+        Assert.assertNotNull(pilha.getUltimo().getAnterior());
+        Assert.assertEquals(Integer.valueOf(20), Integer.valueOf(pilha.getUltimo().getAnterior().getElemento()));
     }
 
     @Test
@@ -32,6 +35,9 @@ public class PilhaComListaEncadeadaTest {
 
         Assert.assertEquals("[10]", pilha.imprimir());
         Assert.assertEquals(1, pilha.retornarQuantidadeDeElementos());
+        Assert.assertNotNull(pilha.getUltimo());
+        Assert.assertNull(pilha.getUltimo().getAnterior());
+        Assert.assertNull(pilha.getUltimo().getProximo());
     }
 
     @Test
