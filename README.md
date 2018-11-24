@@ -3,7 +3,7 @@
 
 # estrutura-de-dados
 
-Exemplos e execícios desenvolvidos na diciplína de Estruturas de Dados
+Exemplos e execícios desenvolvidos na disciplina de Estruturas de Dados
 
 - [Arrays](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/arrays)
 - [Listas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas)
@@ -14,7 +14,11 @@ Exemplos e execícios desenvolvidos na diciplína de Estruturas de Dados
      - [Listas Duplamente Encadeadas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/listas/dinamica/duplamenteencadeada)
 - [Filas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/filas)
 - [Pilhas](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/pilhas)
+- [Árvores](https://github.com/emmanuelneri/estrutura-de-dados/tree/master/src/main/java/br/com/emmanuelneri/arvores/implementacao)
 
+# Alunos
+
+O material está disponível no site [emmmanuelneri.com.br](https://emmanuelneri.com.br/aulas/facec/estrutura-de-dados/)
 
 # Setup da aplicação
 
